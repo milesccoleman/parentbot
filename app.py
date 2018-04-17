@@ -10,7 +10,10 @@ bot.set_trainer(ListTrainer)
 
 bot.train(conv)
 
-bot = ChatBot('LBH_BOT', filters=["chatterbot.filters.RepetitiveResponseFilter"])
+bot = ChatBot(
+    'LBH_BOT', 
+    filters=["chatterbot.filters.RepetitiveResponseFilter"]
+)
 
 @app.route("/")
 def home():
