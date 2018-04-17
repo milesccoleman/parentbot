@@ -4,14 +4,13 @@ from chatterbot import ChatBot
 
 app = Flask(__name__)
 
-bot = ChatBot('LBH_BOT')
+bot = ChatBot('LBH_BOT', filters=["chatterbot.filters.RepetitiveResponseFilter"])
 
 conv = open('chats.txt', 'r').readlines()
 
 bot.set_trainer(ListTrainer)
 
 bot.train(conv)
-
 
 
 
